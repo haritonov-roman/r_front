@@ -4,19 +4,21 @@ import { Component } from 'react';
 class Btn extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      count: 0
-    }
+
+    // this.state = {
+    //   count: 0
+    // }
 
     this.inc = this.inc.bind(this)
   }
 
   inc(e) {
-    e.preventDefault()
+    e.preventDefault();
 
-    this.setState( prevState => ({
-      count: prevState.count + 1
-    }))
+    console.log(true);
+    // this.setState( prevState => ({
+    //   count: prevState.count + 1
+    // }))
   }
 
   render() {
@@ -25,7 +27,7 @@ class Btn extends Component {
         className="btn"
         onClick={ this.inc }
       >
-        { this.props.text }: { this.state.count }
+        { this.props.text }
       </button>
     )
   }
